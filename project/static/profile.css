@@ -1,0 +1,35 @@
+.header{
+    display: flex;
+    width: 100%;
+} 
+
+.container{
+    margin-top: 6rem;
+}
+
+.name{
+    font-size: 3rem;
+    margin-top: 1.3rem;
+    margin-left: 3rem;
+}
+
+.img-thumbnail{
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+}
+.posts-count{
+    width: 50%;
+    margin:auto;
+}
+.medium{
+    font-size: 1.5rem;
+}
+.posts{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.button{
+    width: 50%;
+    margin: auto;
+}

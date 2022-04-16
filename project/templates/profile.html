@@ -1,5 +1,35 @@
 {% extends 'base.html' %}
 
+{% block title %}
+Profile
+{% endblock %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'profile.css' %}">
+{% endblock %}
 {% block active_profile %}
 active
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="header">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLqfekg_kitC_QJ5kgBUTh2tt5EIcxEnQDQ&usqp=CAU" class="img-thumbnail" alt="...">
+        
+            
+            <div class="posts-count">
+            <p class="name">Naman Goyal</p>
+            <div class="posts">
+                <h6 class="medium ">Posts</h6>
+                <p><small>10</small></p>
+            </div>
+        </div>
+        <div class="button">
+        <button>Edit</button>
+        </div>
+    </div>
+       
+    <hr>
+</div>
 {% endblock %}
