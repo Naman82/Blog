@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from blog.models import Post
 # Create your views here.
 
 def home(request):
@@ -16,3 +16,12 @@ def register(request):
 
 def addpost(request):
     return render(request, 'Addpost.html')
+
+def post(request):
+    if request.method == 'POST':
+        image=request.FILES['posts']
+        content=request.POST['content']
+
+    post=Post(content=content , image=image)
+    post.save()
+    return render(request, 'home.html')

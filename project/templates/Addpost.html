@@ -11,32 +11,43 @@ active
 {% block body %}
 
 <div class="container">
-    <div class="card mx-auto " style="width: 18rem; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; margin-top: 10REM;">
+    <div class="card mx-auto " style="width: 18rem; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; margin-top: 10rem;">
         <div class="card-body">
-            <form>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
                 <div class="heading mb-5" style="margin-left: 4.4rem;">
                     <h3 style="font-weight: 400;">NEW POST</h3>
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputImage1" class="form-label">Choose Image:</label>
-                  <input type="file" class="form-control" id="exampleInputImage1">
+                  <input type="file" class="form-control" id="exampleInputImage1" name="posts">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputContent1" class="form-label">Content:</label>
-                  <textarea type="text" class="form-control" id="exampleInputContent1"></textarea>
+                  <textarea type="text" class="form-control" id="exampleInputContent1" name="content"></textarea>
                 </div>
                 
                 
                 <div class="button mb-3" style="margin-left: 6rem;">
-                    <button type="submit" class="btn btn-success ">Post</button>
+                    <button type="submit" class="btn btn-success " id="button">Post</button>
                 </div>
-                <!-- <div class="link" style="margin-left: 2.5rem;">
-                    Already a User?
-                    <a href="{% url 'login' %}" class="card-link mx-auto">Login here</a>
-                  </div> -->
               </form>
         </div>
       </div>
 </div>
+
+<script>
+    document.getElementById('button').onclick = function(){
+        const image = document.getElementById('exampleInputImage1').value
+        const content = document.getElementById('exampleInputContent1').value
+
+        if( image === '' && content === ''){
+            alert('Fill any of the Field !')
+        }
+        else{
+            form.setAttribute("action","{% url 'post' %}");
+        }
+    }
+</script>
 
 {% endblock %}
