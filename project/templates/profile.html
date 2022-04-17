@@ -13,23 +13,26 @@ active
 {% endblock %}
 
 {% block body %}
+<style>
+    body{
+    background-color: #ecf0f5;
+}
+</style>
 <div class="container">
-    <div class="header">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLqfekg_kitC_QJ5kgBUTh2tt5EIcxEnQDQ&usqp=CAU" class="img-thumbnail" alt="...">
-        
-            
-            <div class="posts-count">
-            <p class="name">Naman Goyal</p>
-            <div class="posts">
-                <h6 class="medium ">Posts</h6>
-                <p><small>10</small></p>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <!-- <div class="col-md-4"> -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPhZpix6A5mOmlZ60y-NXw5bVMzPR_xYD17Q&usqp=CAU" class="img-fluid col-md-4 " alt="...">
+          <!-- </div> -->
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
+          </div>
         </div>
-        <div class="button">
-        <button>Edit</button>
-        </div>
+      </div>
     </div>
-       
-    <hr>
 </div>
 {% endblock %}

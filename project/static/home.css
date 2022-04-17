@@ -1,30 +1,58 @@
-.card{
-    width:50rem;
-    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+body{
+    background-color: #ecf0f5;
 }
+.box-widget {
+    border: none;
+    position: relative;
+}
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.box-header.with-border {
+    border-bottom: 1px solid #f4f4f4;
+}
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+.user-block img {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+.user-block .username {
+    font-size: 16px;
+    font-weight: 600;
+}
+.user-block .description {
+    color: #999;
+    font-size: 13px;
+}
+.user-block .username, 
+.user-block .description {
+    display: block;
+    margin-left: 50px;
+}
+.box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+.pad {
+    padding: 10px;
+}
+
 img{
-    height:24rem;
-}
-.img-thumbnail{
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
-}
-.headbar{
-    display: flex;
-    margin-bottom: 1rem;
-}
-.profile{
-    margin-left: 1rem;
-}
-p{
-    font-size: 12px;
-}
-.profile-name{
-    margin: 0;
-    margin-top: 0.5rem;
-}
-.time{
-    margin-bottom: 0;
-    margin-top: 0.4rem;
+  width: 37.5rem;
+  height: 18.75rem;
 }

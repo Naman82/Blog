@@ -19,30 +19,26 @@
         <div class="card mx-auto mt-5" style="width: 18rem; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
             <div class="card-body">
                 <form>
-                    <div class="heading mb-4" style="margin-left: 4.4rem;">
-                        <h3 style="font-weight: 400;">REGISTER</h3>
+                    <div class="heading mb-4" style="margin-left: 5rem;">
+                        <h3 style="font-weight: 400;">LOGIN</h3>
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                      
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-4">
                       <label for="exampleInputPassword1" class="form-label">Password</label>
                       <input type="password" class="form-control" id="exampleInputPassword1">
                     </div>
-                    <div class="mb-4">
-                      <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword2">
-                    </div>
-                    
+                  
                     <div class="button mb-3" style="margin-left: 5rem;">
                         <button type="submit" class="btn btn-success ">Submit</button>
                     </div>
                     <div class="link" style="margin-left: 2.5rem;">
-                        Already a User?
-                        <a href="{% url 'login' %}" class="card-link mx-auto">Login here</a>
-                      </div>
+                      New User?
+                      <a href="{% url 'register' %}" class="card-link mx-auto">Register here</a>
+                    </div>
                   </form>
             </div>
           </div>

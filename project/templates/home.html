@@ -5,9 +5,9 @@ Home
 {% endblock %}
 
 {% block head %}
-<!-- write your code here -->
 {% load static %}
 <link rel="stylesheet" href="{% static 'home.css' %}">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 {% endblock %}
 
@@ -15,29 +15,23 @@ Home
 active
 {% endblock %}
 
-
 {% block body %}
-
-<div class="container mt-5">
-    <div class="card">
-        <div class="card-body">
-            <div class="headbar">
-
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLqfekg_kitC_QJ5kgBUTh2tt5EIcxEnQDQ&usqp=CAU" class="img-thumbnail" alt="...">
-                <div class="profile">
-                    <h6 class="profile-name">Naman Goyal</h6>
-                    <!-- <p class="time">2d ago</p> -->
-                    <p class="card-text time"><small class="text-muted"> 2 days ago</small></p>
-                </div>
-            </div>
-          <p class="card-text mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti maxime molestias laboriosam optio deserunt magni eos vero consectetur debitis. Fuga modi laudantium atque aliquam eaque magnam dolores officiis rerum praesentium?</p>
-          <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-        </div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPhZpix6A5mOmlZ60y-NXw5bVMzPR_xYD17Q&usqp=CAU" class="card-img-bottom " alt="...">
-        <!-- <img src="..." class="" alt="..."> -->
+<div class="container bootstrap snippets bootdey mt-5">
+<div class="col-md-8">
+  <div class="box box-widget">
+    <div class="box-header with-border">
+      <div class="user-block">
+        <img class="img-circle" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User Image">
+        <span class="username">John Breakgrow jr.</span>
+        <span class="description">7:30 PM Today</span>
       </div>
+    </div>
+    <div class="box-body" style="display: block;">
+      <img class="img-responsive pad img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPhZpix6A5mOmlZ60y-NXw5bVMzPR_xYD17Q&usqp=CAU" alt="Photo">
+      <p>I took this photo this morning. What do you guys think?</p>
+    </div>
+  </div>
 </div>
-
-<!-- <h1>Hello World</h1> -->
+</div>
 
 {% endblock %}
