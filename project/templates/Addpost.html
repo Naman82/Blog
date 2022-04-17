@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Post
+{% endblock %}
+
+{% block addpost_active %}
+active
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="card mx-auto " style="width: 18rem; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; margin-top: 10REM;">
+        <div class="card-body">
+            <form>
+                <div class="heading mb-5" style="margin-left: 4.4rem;">
+                    <h3 style="font-weight: 400;">NEW POST</h3>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputImage1" class="form-label">Choose Image:</label>
+                  <input type="file" class="form-control" id="exampleInputImage1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputContent1" class="form-label">Content:</label>
+                  <textarea type="text" class="form-control" id="exampleInputContent1"></textarea>
+                </div>
+                
+                
+                <div class="button mb-3" style="margin-left: 6rem;">
+                    <button type="submit" class="btn btn-success ">Post</button>
+                </div>
+                <!-- <div class="link" style="margin-left: 2.5rem;">
+                    Already a User?
+                    <a href="{% url 'login' %}" class="card-link mx-auto">Login here</a>
+                  </div> -->
+              </form>
+        </div>
+      </div>
+</div>
+
+{% endblock %}

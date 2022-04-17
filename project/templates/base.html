@@ -50,7 +50,7 @@ a.navbar-brand{
             </li>
         
             <li class="nav-item">
-              <a class="nav-link " href="#">Add Post</a>
+              <a class="nav-link{% block addpost_active %} {% endblock %}" href="{% url 'addpost' %}">Add Post</a>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="{% url 'login' %}">Login</a>

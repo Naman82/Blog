@@ -13,3 +13,6 @@ def login(request):
 
 def register(request):
     return render(request,'register.html')
+
+def addpost(request):
+    return render(request, 'Addpost.html')
