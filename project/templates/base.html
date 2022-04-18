@@ -45,16 +45,23 @@ a.navbar-brand{
             <li class="nav-item">
               <a class="nav-link {% block active_home %} {% endblock %}" aria-current="page" href="/">Home</a>
             </li>
+            {% if user.is_authenticated %}
             <li class="nav-item">
               <a class="nav-link {% block active_profile %} {% endblock %}" href="{% url 'profile' %}">Profile</a>
             </li>
-        
+            {% endif %}
             <li class="nav-item">
               <a class="nav-link{% block addpost_active %} {% endblock %}" href="{% url 'addpost' %}">Add Post</a>
+            </li> 
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'logout' %}">Logout</a>
             </li>
+            {% else %}
             <li class="nav-item">
               <a class="nav-link " href="{% url 'login' %}">Login</a>
             </li>
+            {% endif %}
           </ul>
           <form class="d-flex">
             <input class="form-control form-shape me-2" type="search" placeholder="Search" aria-label="Search">

@@ -18,18 +18,19 @@
     <div class="container">
         <div class="card mx-auto mt-5" style="width: 18rem; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
             <div class="card-body">
-                <form>
+                <form method="post" action="{% url 'login' %}">
+                  {% csrf_token %}
                     <div class="heading mb-4" style="margin-left: 5rem;">
                         <h3 style="font-weight: 400;">LOGIN</h3>
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
                       
                     </div>
                     <div class="mb-4">
                       <label for="exampleInputPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                     </div>
                   
                     <div class="button mb-3" style="margin-left: 5rem;">
