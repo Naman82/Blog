@@ -1,17 +1,20 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
-from blog.models import Post
+from blog.models import Post,Profile
 from django.contrib.auth.models import User,auth
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def home(request):
     posts=Post.objects.all()
-    # print(post.image.url)
+    # print(post.user)
     return render(request,'home.html',{'posts':posts})
 
 def profile(request):
-    return render(request,'profile.html')
+    user= request.user
+    profile=Profile.objects.filter(user=user).first()
+    
+    return render(request,'profile.html',{'profile':profile})
 
 def login(request):
     if request.method =='POST':

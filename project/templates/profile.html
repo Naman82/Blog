@@ -35,22 +35,22 @@ h6{
           <!-- </div> -->
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title mb-3">Naman Goyal</h5>
+              <h5 class="card-title mb-3">{{profile.user.username}}</h5>
               <div class="card-text">
                   <h6>Email:</h6>
-                  <p><small>B520031@iiit-bh.ac.in</small></p>
+                  <p><small>{{profile.user.email}}</small></p>
               </div>
               <div class="card-text">
                   <h6>Contact Number:</h6>
-                  <p><small>8307541411</small></p>
+                  <p><small>{{profile.contact}}</small></p>
               </div>
               <div class="card-text">
                   <h6>Bio:</h6>
-                  <p><small>sorphomore at IIIT bhubaneswar</small></p>
+                  <p><small>{{profile.bio}}</small></p>
               </div>
               <div class="card-text">
                   <h6>Website:</h6>
-                  <p><small>www.naman-goyal.com</small></p>
+                  <p><small>{{profile.url}}</small></p>
               </div>
               <a class="btn btn-primary">Edit Profile</a>
             </div>
