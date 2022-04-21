@@ -6,7 +6,9 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def home(request):
-    return render(request,'home.html')
+    posts=Post.objects.all()
+    # print(post.image.url)
+    return render(request,'home.html',{'posts':posts})
 
 def profile(request):
     return render(request,'profile.html')
@@ -59,8 +61,9 @@ def post(request):
     if request.method == 'POST':
         image=request.FILES['posts']
         content=request.POST['content']
+        user= request.user
 
-    post=Post(content=content , image=image)
+    post=Post(user=user,content=content,image=image)
     post.save()
-    return render(request, 'home.html')
+    return redirect('/')
     
