@@ -7,7 +7,9 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
     posts=Post.objects.all()
-    # print(post.user)
+    # user=request.user
+    # profile=Profile.objects.filter(user=user).first()
+
     return render(request,'home.html',{'posts':posts})
 
 def profile(request):
@@ -65,8 +67,8 @@ def post(request):
         image=request.FILES['posts']
         content=request.POST['content']
         user= request.user
-
-    post=Post(user=user,content=content,image=image)
+        profile=Profile.objects.get(user=request.user)   
+    post=Post(user=user,content=content,image=image,profile=profile)
     post.save()
     return redirect('/')
     
